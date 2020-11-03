@@ -25,7 +25,7 @@
 
 <body>
 
-@include('layouts.partials.navigation')，
+@include('layouts.partials.navigation')
 
 <!-- Main Content -->
 @yield('content')
