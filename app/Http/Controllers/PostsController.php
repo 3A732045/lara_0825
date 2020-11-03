@@ -13,8 +13,22 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        return view('index');
     }
+    public function show()
+    {
+        return view('post');
+    }
+    public function about()
+    {
+        return view('about');
+    }
+    public function contact()
+    {
+        return view('contact');
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -43,11 +57,12 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    /*
+     * public function show($id)
     {
         //
     }
-
+*/
     /**
      * Show the form for editing the specified resource.
      *
