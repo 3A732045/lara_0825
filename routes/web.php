@@ -48,8 +48,10 @@ Route::get('/', function () {
 //    dd($allPosts);
 //    $savedPosts = Post::where('title', 'saved title')->get();
 //    dd($savedPosts);
-    $fourthPost = Post::find(4);
-    dd($fourthPost);
+//    $fourthPost = Post::find(4);
+//    dd($fourthPost);
+    $lastPost = Post::orderBy('id', 'DESC')->first();
+    dd($lastPost);
 });
 Route::get("index",[\App\Http\Controllers\PostsController::class,'index'])->name("posts.index");
 Route::get("post",[\App\Http\Controllers\PostsController::class,'show'])->name("posts.show");
