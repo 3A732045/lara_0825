@@ -30,8 +30,13 @@ Route::get('/', function () {
 //    dd($post);
 //    $post = Post::find(5);
 //    dd($post);
-    $post = Post::where('id', '<', 11)->orderBy('id', 'DESC')->get();
-    dd($post);
+//    $post = Post::where('id', '<', 11)->orderBy('id', 'DESC')->get();
+//    dd($post);
+    $post = Post::find(4);
+    $post->update([
+        'title' => 'updated title',
+        'content' => 'updated content',
+    ]);
 });
 Route::get("index",[\App\Http\Controllers\PostsController::class,'index'])->name("posts.index");
 Route::get("post",[\App\Http\Controllers\PostsController::class,'show'])->name("posts.show");
