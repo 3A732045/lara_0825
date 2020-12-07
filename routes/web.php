@@ -44,8 +44,10 @@ Route::get('/', function () {
 //    $post->delete();
 //    Post::destroy(7);
 //    Post::destroy(3, 5, 9);
-    $allPosts = Post::all();
-    dd($allPosts);
+//    $allPosts = Post::all();
+//    dd($allPosts);
+    $savedPosts = Post::where('title', 'saved title')->get();
+    dd($savedPosts);
 });
 Route::get("index",[\App\Http\Controllers\PostsController::class,'index'])->name("posts.index");
 Route::get("post",[\App\Http\Controllers\PostsController::class,'show'])->name("posts.show");
