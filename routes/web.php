@@ -43,7 +43,9 @@ Route::get('/', function () {
 //    $post = Post::find(2);
 //    $post->delete();
 //    Post::destroy(7);
-    Post::destroy(3, 5, 9);
+//    Post::destroy(3, 5, 9);
+    $allPosts = Post::all();
+    dd($allPosts);
 });
 Route::get("index",[\App\Http\Controllers\PostsController::class,'index'])->name("posts.index");
 Route::get("post",[\App\Http\Controllers\PostsController::class,'show'])->name("posts.show");
