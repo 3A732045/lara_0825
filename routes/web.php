@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use App\Models\Comment;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,8 +51,12 @@ Route::get('/', function () {
 //    dd($savedPosts);
 //    $fourthPost = Post::find(4);
 //    dd($fourthPost);
-    $lastPost = Post::orderBy('id', 'DESC')->first();
-    dd($lastPost);
+//    $lastPost = Post::orderBy('id', 'DESC')->first();
+//    dd($lastPost);
+    $comment = new Comment();
+    $comment->content = 'ddd';
+    $comment->post_id = '1';
+    $comment->save();
 });
 Route::get("index",[\App\Http\Controllers\PostsController::class,'index'])->name("posts.index");
 Route::get("post",[\App\Http\Controllers\PostsController::class,'show'])->name("posts.show");
