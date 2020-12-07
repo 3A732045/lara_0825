@@ -54,8 +54,8 @@ Route::get('/', function () {
 //    $lastPost = Post::orderBy('id', 'DESC')->first();
 //    dd($lastPost);
     $comment = new Comment();
-    $comment->content = 'ddd';
-    $comment->post_id = '1';
+    $comment->content = 'ggg';
+    $comment->post_id = '4';
     $comment->save();
 });
 Route::get("index",[\App\Http\Controllers\PostsController::class,'index'])->name("posts.index");
