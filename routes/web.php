@@ -15,17 +15,16 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
-    /*
-    $post = new Post();
-    $post->title = 'test title';
-    $post->content = 'test content';
-    $post->save();
-
-    Post::create([
-        'title' => 'test title 2',
-        'content' => 'test content 2',
-    ]);
-    */
+//
+//    $post = new Post();
+//    $post->title = 'test title';
+//    $post->content = 'test content';
+//    $post->save();
+//
+//    Post::create([
+//        'title' => 'test title 2',
+//        'content' => 'test content 2',
+//    ]);
 //    $post = Post::all();
 //    dd($post);
 //    $post = Post::find(5);
@@ -41,8 +40,9 @@ Route::get('/', function () {
 //    $post->title = 'saved title';
 //    $post->content = 'saved content';
 //    $post->save();
-    $post = Post::find(2);
-    $post->delete();
+//    $post = Post::find(2);
+//    $post->delete();
+    Post::destroy(7);
 });
 Route::get("index",[\App\Http\Controllers\PostsController::class,'index'])->name("posts.index");
 Route::get("post",[\App\Http\Controllers\PostsController::class,'show'])->name("posts.show");
